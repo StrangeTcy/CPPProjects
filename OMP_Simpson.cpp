@@ -24,7 +24,9 @@ int main()
 	for(i = 0; i < N; i++)
 	{
 		double x = a + h*i;
-		s+= ( pow(2,x)+1/(log(2)) )*(((i == 0) || (i == N)) ? 1 : ((i&1)==0) ? 2 : 4);	
+		s+= ( pow(2,x)+1/(log(2)) )*(((i == 0) || (i == N)) ? 1 : ((i&1)==0) ? 2 : 4);	// this hack is actually
+												// the Simpson's formula
+												// that computes an integral numerically
 	}
 
 	s *= h/3;
