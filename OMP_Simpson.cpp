@@ -19,7 +19,7 @@ int main()
 	double s = 0;
 	double h = (b - a)/N;
 	unsigned int i;
-	#pragma omp parallel for shared(s) private(i) num_threads(2)
+	#pragma omp parallel for shared(s) private(i) num_threads(2) ordered
  
 	for(i = 0; i < N; i++)
 	{
